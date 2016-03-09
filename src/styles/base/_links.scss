@@ -1,0 +1,25 @@
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: all .2s ease;
+  &:hover, &:focus {
+    color: darken($link-color,9%);
+  }
+}
+
+.social-link {
+  svg {
+    fill: $main-color;
+    vertical-align: top;
+    width: 25px;
+    transition: all .2s ease;
+  }
+  &:hover, &:focus {
+    svg {
+      fill: darken($main-color,9%);
+    }
+  }
+
+}

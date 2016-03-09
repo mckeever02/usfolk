@@ -1,0 +1,58 @@
+html {
+  font-size: 62.5%;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, * {
+  @include box-sizing(border-box);
+}
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: $body;
+  color: #000;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+body {
+  background: url(../images/pattern@2x.png) repeat $main-color;
+  background-size: 50%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: $tablet) {
+    background-size: 15%;
+  }
+}
+
+
+.flexbox-box {
+  box-sizing: border-box;
+  background-color: white;
+  max-width: 80vw;
+  @media (min-width: $desktop) {
+    max-width: 40vw;
+  }
+}
+
+.flexbox-box-container {
+  padding: 15% 7%;
+  @media (min-width: $tablet) {
+    padding: 10%;
+  }
+}
+
+.logo {
+  max-width: 120px;
+  padding: 4rem 0;
+  @media (min-width: $tablet) {
+    max-width: 180px;
+  }
+}

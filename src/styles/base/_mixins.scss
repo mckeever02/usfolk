@@ -1,0 +1,81 @@
+//------------------------------------
+//   MIXINS
+//------------------------------------
+
+
+// Retina
+@mixin retinize($file, $type, $width, $height) {
+  background-image: url('../images/' + $file + '.' + $type);
+
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+         (min--moz-device-pixel-ratio: 1.5),
+         (-o-min-device-pixel-ratio: 3/2),
+         (min-device-pixel-ratio: 1.5),
+         (min-resolution: 1.5dppx) {
+    & {
+      background-image: url('../images/' + $file + '-2x.' + $type);
+      background-size: $width $height;
+    }
+  }
+}
+
+//Box-Sizing
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+//Border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+//Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//Text truncate  - when text overflows its container
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//Hide text
+@mixin hide-text{
+  overflow:hidden;
+  text-indent:-9000px;
+  display:block;
+}
+
+//Horizontal Navigation lists
+@mixin navigation-list {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+  > li{
+    display:block;
+    float:left;
+    &:last-child{
+      margin-right:0px;
+    }
+  }
+}
+//Font Smoothing
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}

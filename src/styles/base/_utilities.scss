@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    #UTILITIES
+\*------------------------------------*/
+
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.u-pull-right {
+  float: right;
+}
+.u-pull-left {
+  float: left;
+}
+.u-center {
+  margin: 0 auto;
+}
+.u-center-table {
+  display: table;
+  @extend .u-center;
+}
+.u-left {
+  text-align: left;
+}
+.u-right {
+  text-align: right;
+}
+.u-text-center {
+  text-align: center;
+}
+.u-text-left {
+  text-align: left;
+}
+.u-text-right {
+  text-align: right;
+}
+.u-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.u-hide-text {
+  @include hide-text;
+}
+.u-mb0 {
+  margin-bottom: 0;
+}
