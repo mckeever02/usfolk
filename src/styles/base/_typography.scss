@@ -29,6 +29,11 @@ h1 {
   @media (min-width: $desktop) {
     font-size: 8.5vw;
   }
+  &::selection {
+    color: $link-color;
+    text-shadow: 5px 5px $main-color;
+    background-color: transparent;
+  }
 }
 h2, p {
   font-family: $body;

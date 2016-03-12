@@ -431,6 +431,14 @@ h1 {
   @media (min-width: 1260px) {
     h1 {
       font-size: 8.5vw; } }
+  h1::-moz-selection {
+    color: #060e9f;
+    text-shadow: 5px 5px #34d9c3;
+    background-color: transparent; }
+  h1::selection {
+    color: #060e9f;
+    text-shadow: 5px 5px #34d9c3;
+    background-color: transparent; }
 
 h2, p {
   font-family: 'Dosis', sans-serif;
@@ -581,7 +589,17 @@ li {
 
 .social-list {
   margin-top: 2rem; }
-  @media (min-width: 725px) {
+  @media (min-width: 840px) {
+    .social-list {
+      margin-top: 0;
+      display: inline-block;
+      float: right; } }
+  @media (min-width: 1260px) {
+    .social-list {
+      margin-top: 2rem;
+      float: left;
+      display: block; } }
+  @media (min-width: 1580px) {
     .social-list {
       margin-top: 0;
       display: inline-block;
@@ -805,3 +823,13 @@ body {
   @media (min-width: 700px) {
     .logo {
       max-width: 180px; } }
+
+::-moz-selection {
+  background-color: #060e9f;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background-color: #060e9f;
+  color: #fff;
+  text-shadow: none; }
