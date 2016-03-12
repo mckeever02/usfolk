@@ -56,3 +56,9 @@ body {
     max-width: 180px;
   }
 }
+
+::selection {
+    background-color: $link-color;
+    color: #fff;
+    text-shadow: none;
+  }
